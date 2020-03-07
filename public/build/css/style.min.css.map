@@ -1,1 +1,1 @@
-{"version":3,"file":"style.min.css","sources":["style.scss","global/_global.scss","global/header.scss","global/footer.scss"],"names":[],"mappings":"","sourceRoot":"../../assets/styles"}
+{"version":3,"sources":["global/header.scss","global/_global.scss"],"names":[],"mappings":"AAAA,kBAAkB,CACjB,aAAa,CAAC,iBAAiB,CAC/B,AAED,iBAAiB,CACf,OAAO,CAAE,MAAM,CAChB,OAAO,CAAC,IAAI,CAKZ,AAPD,iBAAiB,CAIhB,YAAY,CACX,KAAK,CAAC,KAAK,CACX,ACPF,IAAI,CACH,MAAM,CAAC,CAAC,CACR,AAED,iBAAiB,CAChB,SAAS,CAAC,MAAM,CAChB,MAAM,CAAC,MAAM,CACb","file":"style.min.css","sourceRoot":"../../assets/styles"}
