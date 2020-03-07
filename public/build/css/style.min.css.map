@@ -1,1 +1,1 @@
-{"version":3,"names":[],"mappings":"","sources":["style.scss"],"file":"style.min.css","sourceRoot":"../../assets/styles"}
+{"version":3,"file":"style.min.css","sources":["style.scss","global/_global.scss","global/header.scss","global/footer.scss"],"names":[],"mappings":"","sourceRoot":"../../assets/styles"}
