@@ -1,0 +1,35 @@
+.footer-background{
+	border-top:1px solid #F5F5F5;
+}
+
+.footer-container{
+	padding:15px 0;
+	display: flex;
+	justify-content:space-between;
+
+	.footer-section{
+		display: flex;
+		max-width:250px;
+		flex-direction:column;
+
+		.footer-section-title{
+			font-size:24px;
+			padding-bottom:15px;
+			border-bottom:1px solid #F5F5F5;
+		}
+
+		.footer-section-content{
+			display: flex;
+			flex-direction:column;
+			margin-top:20px;
+		}
+	}
+}
+
+.sub-footer-background{
+	border-top:1px solid #F5F5F5;
+}
+
+.sub-footer-container{
+	padding:10px 0;
+}

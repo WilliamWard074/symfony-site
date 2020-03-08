@@ -12,6 +12,9 @@
             {% include 'header.html.twig' %}
         {% endblock %}
         {% block body %}{% endblock %}
+        {% block footer %}
+            {% include 'footer.html.twig' %}
+        {% endblock %}
         {% block javascripts %}
         	<script src="{{ asset('build/js/scripts.min.js') }}"></script>
         {% endblock %}
