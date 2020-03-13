@@ -14,5 +14,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglify": "^2.1.2",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
   }
 }
