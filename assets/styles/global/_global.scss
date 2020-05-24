@@ -1,8 +1,10 @@
 @import 'header';
 @import 'footer';
+@import 'colours';
 
 body{
 	margin:0;
+	color: $font-colour;
 }
 
 .layout-container{
