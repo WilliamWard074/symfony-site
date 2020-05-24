@@ -1,0 +1,10 @@
+{% if slides %}	
+	<div class="homepage-slider layout-container">
+		{% for slide in slides %}
+			<div class="homepage-slider-container" style="background-image:url('{{ vich_uploader_asset(slide, 'imageFile') }}');">
+				<h2 class="homepage-slider-container__title">{{slide.title}}</h2>
+				<div class="homepage-slider-container__text">{{slide.text|raw}}</div>
+			</div>
+		{% endfor %}
+	</div>
+{% endif %}

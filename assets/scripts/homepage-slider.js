@@ -1,0 +1,3 @@
+$(function() {
+	$('.homepage-slider').slick();
+});

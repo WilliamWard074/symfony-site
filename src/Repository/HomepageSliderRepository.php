@@ -18,33 +18,14 @@ class HomepageSliderRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, HomepageSlider::class);
     }
-
-    // /**
-    //  * @return HomepageSlider[] Returns an array of HomepageSlider objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    
+    public function findAll()
     {
         return $this->createQueryBuilder('h')
-            ->andWhere('h.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('h.id', 'ASC')
-            ->setMaxResults(10)
+            ->andWhere('h.active = :active')
+            ->setParameter('active', true)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
-
-    /*
-    public function findOneBySomeField($value): ?HomepageSlider
-    {
-        return $this->createQueryBuilder('h')
-            ->andWhere('h.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }

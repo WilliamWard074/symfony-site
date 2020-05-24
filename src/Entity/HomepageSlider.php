@@ -41,7 +41,7 @@ class HomepageSlider
     private $image;
 
     /**
-     * @Vich\UploadableField(mapping="sider_images", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="slider_images", fileNameProperty="image")
      * @var File
      */
     private $imageFile;
