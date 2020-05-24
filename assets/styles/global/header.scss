@@ -1,12 +1,13 @@
-.header-background{
+.header{
 	border-bottom:1px solid #F5F5F5;
-}
+	
+	&-container{
+	 	padding: 25px 0;
+		display:flex;
 
-.header-container{
- 	padding: 25px 0;
-	display:flex;
+	}
 
-	.header-logo{
+	&-logo{
 		width:300px;
 	}
 }
