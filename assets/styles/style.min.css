@@ -21,22 +21,26 @@
   justify-content: space-between;
 }
 
-.footer-container-section {
+.footer-section {
   display: flex;
   max-width: 250px;
   flex-direction: column;
 }
 
-.footer-container-section-title {
+.footer-section-title {
   font-size: 24px;
   padding-bottom: 15px;
   border-bottom: 1px solid #F5F5F5;
 }
 
-.footer-container-section-content {
-  display: flex;
-  flex-direction: column;
+.footer-section-list {
   margin-top: 20px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-section-list__item {
+  padding: 10px 0;
 }
 
 .sub-footer {
@@ -49,6 +53,15 @@
 
 body {
   margin: 0;
+  color: #66545e;
+  font-size: 16px;
+}
+
+a {
+  color: #AA6F73;
+}
+
+a:hover {
   color: #66545e;
 }
 
