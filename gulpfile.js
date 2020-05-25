@@ -27,8 +27,8 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function(){
   return gulp.src([ // The order that you list the files in this array IS IMPORTANT!!
-      'assets/scripts/**.*',
       'assets/scripts/vendor/**.*',
+      'assets/scripts/**.*',
     ])
   .pipe(concat('scripts.min.js')) // concatenates the JS files listed above into one file called scripts.min.js
   .pipe(uglify({
