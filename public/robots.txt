@@ -1,0 +1,3 @@
+# robots.txt #
+
+sitemap: https://www.example.com/sitemap.xml
