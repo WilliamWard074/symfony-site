@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        {% if getPage(app.request.get('_route')) %}
+            {% set page = getPage(app.request.get('_route')) %}
+        {% endif %}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>{% block title %}Welcome!{% endblock %}</title>      
+        <title>{% if page.metaTitle is defined %}{{page.metaTitle}}{% endif %}</title>      
+        {% block meta_description %}
+            {% if page.metaDescription is defined %}
+                <meta name="description" content="{{page.metaDescription}}">
+            {% endif %}
+        {% endblock %}
         {% block stylesheets %}
         	<link rel="stylesheet" type="text/css" href="{{ asset('build/css/style.min.css') }}">
         {% endblock %}
