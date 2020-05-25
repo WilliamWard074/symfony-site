@@ -31,4 +31,16 @@ class PageRepository extends ServiceEntityRepository
         ;
     }
 
+    public function findByRoute($route)
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.active = :active')
+            ->setParameter('active', true)
+            ->andWhere('p.route = :route')
+            ->setParameter('route', $route)
+            ->setMaxResults(1)
+            ->getQuery()
+            ->getOneOrNullResult();
+        ;
+    }
 }
