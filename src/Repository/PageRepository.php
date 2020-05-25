@@ -19,32 +19,16 @@ class PageRepository extends ServiceEntityRepository
         parent::__construct($registry, Page::class);
     }
 
-    // /**
-    //  * @return Page[] Returns an array of Page objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function getSitemapPages()
     {
         return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
+            ->andWhere('p.active = :active')
+            ->setParameter('active', true)
+            ->andWhere('p.showInSitemap = :showInSitemap')
+            ->setParameter('showInSitemap', true)
             ->getQuery()
             ->getResult()
         ;
     }
-    */
 
-    /*
-    public function findOneBySomeField($value): ?Page
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
-    }
-    */
 }
