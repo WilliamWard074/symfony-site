@@ -25,7 +25,7 @@ class UserFixtures extends Fixture
         $user->setRoles(['ROLE_SUPER_ADMIN']);
         $user->setPassword($this->passwordEncoder->encodePassword(
             $user,
-            '$argon2id$v=19$m=65536,t=4,p=1$0SsjmsKPJwq4AJKmANEV2w$YnejlnYWA2vD2h0Pi91KlZ2XVKLuFyD58WmGoOj4a2g'
+            'admin'
         ));
 
         $manager->persist($user);
