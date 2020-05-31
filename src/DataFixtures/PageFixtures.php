@@ -21,6 +21,26 @@ class PageFixtures extends Fixture
 	        $page->setMetaDescription('This is my new website');
         $manager->persist($page);
 
+        $page = new Page();
+	        $page->setActive(true);
+	        $page->setRoute('contact_us');
+	        $page->setSlug('contact-us');
+	        $page->setShowInSitemap(true);
+	        $page->setTitle('Contact Us');
+	        $page->setMetaTitle('Contact us today');
+	        $page->setMetaDescription('Have an enquiry or need to get in contact with us?');
+        $manager->persist($page);
+
+        $page = new Page();
+	        $page->setActive(true);
+	        $page->setRoute('contact_us_success');
+	        $page->setSlug('contact-us/success');
+	        $page->setShowInSitemap(false);
+	        $page->setTitle('Contact form received');
+	        $page->setMetaTitle('Thank you! Contact form received');
+	        $page->setMetaDescription('Thank you, we have recievied your submission');
+        $manager->persist($page);
+
         $manager->flush();
     }
 }

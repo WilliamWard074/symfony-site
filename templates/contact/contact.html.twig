@@ -1,0 +1,8 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	{% if form is defined %}
+		{{form_start(form)}}
+		{{form_end(form)}}
+	{% endif %}
+{% endblock %}
