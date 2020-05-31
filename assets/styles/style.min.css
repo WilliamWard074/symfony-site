@@ -65,6 +65,11 @@ a:hover {
   color: #66545e;
 }
 
+h1 {
+  font-size: 32px;
+  margin: 20px 0;
+}
+
 .layout-container {
   max-width: 1180px;
   margin: 0 auto;

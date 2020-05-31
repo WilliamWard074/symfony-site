@@ -20,6 +20,13 @@
         {% block header %}
             {% include 'header.html.twig' %}
         {% endblock %}
+        {% block pageTitle %}
+            {% if page.title is defined %}
+                <div class="h1 layout-container">
+                    <h1>{{page.title}}</h1>
+                </div>
+            {% endif %}
+        {% endblock %}
         {% block body %}{% endblock %}
         {% block footer %}
             {% include 'footer.html.twig' %}
