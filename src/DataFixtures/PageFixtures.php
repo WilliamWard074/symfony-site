@@ -41,6 +41,16 @@ class PageFixtures extends Fixture
 	        $page->setMetaDescription('Thank you, we have recievied your submission');
         $manager->persist($page);
 
+        $page = new Page();
+	        $page->setActive(true);
+	        $page->setRoute('about_us');
+	        $page->setSlug('about-us');
+	        $page->setShowInSitemap(true);
+	        $page->setTitle('About us');
+	        $page->setMetaTitle('About us');
+	        $page->setMetaDescription('Learn more about us!');
+        $manager->persist($page);
+
         $manager->flush();
     }
 }
