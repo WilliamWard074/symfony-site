@@ -55,6 +55,11 @@ class Page
      */
     private $metaDescription;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $showInMenu;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -140,6 +145,18 @@ class Page
     public function setMetaDescription(?string $metaDescription): self
     {
         $this->metaDescription = $metaDescription;
+
+        return $this;
+    }
+
+    public function getShowInMenu(): ?bool
+    {
+        return $this->showInMenu;
+    }
+
+    public function setShowInMenu(bool $showInMenu): self
+    {
+        $this->showInMenu = $showInMenu;
 
         return $this;
     }

@@ -5,9 +5,9 @@
 				LOGO
 			</div>
 			<div class="header-links">
-				<a href="">Link1</a>
-				<a href="">Link2</a>
-				<a href="">Link3</a>
+				{% for page in menuPages %}
+					<a href="{{path(page.route)}}">{{page.title}}</a>
+				{% endfor %}
 			</div>
 		</div>
 	</div>

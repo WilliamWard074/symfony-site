@@ -18,7 +18,7 @@
     </head>
     <body>
         {% block header %}
-            {% include 'header.html.twig' %}
+            {{ render(controller('App\\Controller\\DefaultController::header')) }}
         {% endblock %}
         {% block pageTitle %}
             {% if page.title is defined %}

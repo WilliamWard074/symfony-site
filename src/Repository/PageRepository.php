@@ -43,4 +43,16 @@ class PageRepository extends ServiceEntityRepository
             ->getOneOrNullResult();
         ;
     }
+
+    public function getMenuPages()
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.active = :active')
+            ->setParameter('active', true)
+            ->andWhere('p.showInMenu = :showInMenu')
+            ->setParameter('showInMenu', true)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }
