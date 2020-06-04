@@ -57,7 +57,7 @@ class PageFixtures extends Fixture
 
         $page = new Page();
 	        $page->setActive(true);
-	        $page->setRoute('default');
+	        $page->setRoute('terms-and-conditions');
 	        $page->setSlug('terms-and-conditions');
 	        $page->setShowInSitemap(true);
 	        $page->setShowInMenu(false);
@@ -69,7 +69,7 @@ class PageFixtures extends Fixture
 
         $page = new Page();
 	        $page->setActive(true);
-	        $page->setRoute('default');
+	        $page->setRoute('privacy-policy');
 	        $page->setSlug('privacy-policy');
 	        $page->setShowInSitemap(true);
 	        $page->setShowInMenu(false);
