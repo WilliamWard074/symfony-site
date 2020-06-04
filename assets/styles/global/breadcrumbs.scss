@@ -1,0 +1,11 @@
+.breadcrumbs{
+	padding:0;
+}
+
+.breadcrumb {
+	display: inline;
+
+	&__seperator{
+		padding:0 10px;
+	}
+}

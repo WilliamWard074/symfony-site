@@ -54,6 +54,11 @@
         {% block header %}
             {{ render(controller('App\\Controller\\DefaultController::header')) }}
         {% endblock %}
+        {% block breadcrumbs %}
+            {% if breadcrumbs is defined %}
+                {% include 'partial/breadcrumbs.html.twig' %}
+            {% endif %}
+        {% endblock %}
         {% block pageTitle %}
             {% if page.title is defined %}
                 <div class="h1 layout-container">

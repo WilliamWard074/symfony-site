@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 use App\Repository\PageRepository;
 
@@ -34,8 +35,15 @@ class DefaultController extends AbstractController
     {
         $page = $this->pageRepository->getDefaultPageByRoute($request->attributes->get('_route'));
 
+        $breadcrumbs[] = [
+            'url'       => $this->generateUrl($request->attributes->get('_route'), [], UrlGeneratorInterface::ABSOLUTE_URL),
+            'position'  => 2, //we use 2 as the homepage is poition 1
+            'name'      => $page->getTitle()
+        ];
+
         return $this->render('default/default.html.twig', [
-            'page' => $page 
+            'page'          => $page,
+            'breadcrumbs'   => $breadcrumbs,
         ]);
     }
 }

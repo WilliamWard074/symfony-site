@@ -5,6 +5,7 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 
 use App\Entity\Contact;
 use App\Form\ContactType;
@@ -31,9 +32,16 @@ class ContactController extends AbstractController
 
 		    return $this->redirectToRoute('contact_us_success');
 		}
+
+        $breadcrumbs[] = [
+            'url'       => $this->generateUrl('contact_us', [], UrlGeneratorInterface::ABSOLUTE_URL),
+            'position'  => 2, //we use 2 as the homepage is poition 1
+            'name'      => 'Contact Us'
+        ];
 		
         return $this->render('contact/contact.html.twig', [
             'form' => $form->createView(),
+            'breadcrumbs'   => $breadcrumbs
         ]);
     }
 

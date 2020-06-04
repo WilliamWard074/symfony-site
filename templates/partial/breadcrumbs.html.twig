@@ -1,0 +1,24 @@
+<ol class="breadcrumbs layout-container" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+	<li class="breadcrumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+		<link href="{{ absolute_url(path('home')) }}" itemprop="item">
+		<a class="breadcrumb__link" href="{{path('home')}}">					
+			<span itemprop="name">Home</span>
+		</a>				
+		<span class="breadcrumb__seperator">|</span>
+		<meta itemprop="position" content="1">
+	</li>
+	{% for breadcrumb in breadcrumbs %}
+		<li class="breadcrumb" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+			<link href="{{breadcrumb.url}}" itemprop="item">
+			{% if not loop.last %}
+				<a class="breadcrumb__link" href="{{breadcrumb.url}}">
+			{% endif %}
+				<span itemprop="name">{{breadcrumb.name}}</span>
+			{% if not loop.last %}
+				</a>
+				<span class="breadcrumb__seperator">|</span>
+			{% endif %}
+			<meta itemprop="position" content="{{breadcrumb.position}}">
+		</li>
+	{% endfor %}
+</ol>
