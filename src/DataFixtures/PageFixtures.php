@@ -55,6 +55,28 @@ class PageFixtures extends Fixture
 	        $page->setMetaDescription('Learn more about us!');
         $manager->persist($page);
 
+        $page = new Page();
+	        $page->setActive(true);
+	        $page->setRoute('default');
+	        $page->setSlug('terms-and-conditions');
+	        $page->setShowInSitemap(true);
+	        $page->setShowInMenu(false);
+	        $page->setTitle('Terms and Conitions');
+	        $page->setMetaTitle('Terms and Conitions');
+	        $page->setMetaDescription('Terms and conitions are really important!');
+        $manager->persist($page);
+
+        $page = new Page();
+	        $page->setActive(true);
+	        $page->setRoute('default');
+	        $page->setSlug('privacy-policy');
+	        $page->setShowInSitemap(true);
+	        $page->setShowInMenu(false);
+	        $page->setTitle('Privacy policy');
+	        $page->setMetaTitle('Privacy policy');
+	        $page->setMetaDescription('Privacy policy is important too!');
+        $manager->persist($page);
+
         $manager->flush();
     }
 }

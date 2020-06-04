@@ -55,4 +55,16 @@ class PageRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
+
+    public function getDefaultPageByRoute($route)
+    {
+        return $this->createQueryBuilder('p')
+            ->andWhere('p.active = :active')
+            ->setParameter('active', true)
+            ->andWhere('p.route = :route')
+            ->setParameter('route', $route)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
 }
