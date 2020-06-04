@@ -1,2 +1,5 @@
 twig:
     default_path: '%kernel.project_dir%/templates'
+    globals:
+      ga_tracking: '%env(GOOGLE_ANALYTICS_ID)%'
+      gtm_tracking: '%env(GOOGLE_TAG_MANAGER_ID)%'
