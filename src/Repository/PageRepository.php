@@ -64,7 +64,7 @@ class PageRepository extends ServiceEntityRepository
             ->andWhere('p.route = :route')
             ->setParameter('route', $route)
             ->getQuery()
-            ->getResult()
+            ->getOneOrNullResult();
         ;
     }
 }
