@@ -64,6 +64,7 @@ class PageFixtures extends Fixture
 	        $page->setTitle('Terms and Conitions');
 	        $page->setMetaTitle('Terms and Conitions');
 	        $page->setMetaDescription('Terms and conitions are really important!');
+	        $page->setContent('This is my terms and conditions!');
         $manager->persist($page);
 
         $page = new Page();
@@ -75,6 +76,7 @@ class PageFixtures extends Fixture
 	        $page->setTitle('Privacy policy');
 	        $page->setMetaTitle('Privacy policy');
 	        $page->setMetaDescription('Privacy policy is important too!');
+	        $page->setContent('This is my privacy policy!');
         $manager->persist($page);
 
         $manager->flush();
