@@ -14,7 +14,7 @@ class ContactController extends AbstractController
     /**
      * @Route("/contact-us/", name="contact_us")
      */
-    public function index(Request $request)
+    public function index(Request $request, \Swift_Mailer $mailer)
     {
 
 		$contact = new Contact();
@@ -28,6 +28,21 @@ class ContactController extends AbstractController
 		    $entityManager = $this->getDoctrine()->getManager();
 		    $entityManager->persist($contact);
 		    $entityManager->flush();
+
+            $message = (new \Swift_Message('Hello Email'))
+                ->setFrom($contact->getEmail())
+                ->setTo(getenv(MAILER_CONTACT_ADDRESS))
+                ->setBody(
+                    $this->renderView(
+                        // templates/emails/registration.html.twig
+                        'email/partial/contact.html.twig',
+                        ['name' => $contact->getName()]
+                    ),
+                    'text/html'
+                )
+            ;
+
+            $mailer->send($message);
 
 		    return $this->redirectToRoute('contact_us_success');
 		}
