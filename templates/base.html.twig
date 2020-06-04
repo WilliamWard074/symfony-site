@@ -27,6 +27,15 @@
                 </div>
             {% endif %}
         {% endblock %}
+
+        {% block pageContent %}
+            {% if page.content is defined %}
+                <div class="layout-container">
+                    {{page.content|raw}}
+                </div>
+            {% endif %}
+        {% endblock %}
+
         {% block body %}{% endblock %}
         {% block footer %}
             {% include 'footer.html.twig' %}
