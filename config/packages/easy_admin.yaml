@@ -1,4 +1,11 @@
 easy_admin:
-   entities:
-       # List the entity class name you want to manage
-       - App\Entity\User
+    entities:
+        HomepageSlider:
+            class: App\Entity\HomepageSlider
+            label: 'Homepage Slider'
+            form:
+                fields:
+                    - { property: 'active' }
+                    - { property: 'title' }
+                    - { property: 'text' }
+                    - { property: 'imageFile', type: 'vich_image' }
